@@ -16,7 +16,7 @@ for item in item_html_list:
     price = item.find("span", class_="deal-price").get_text().strip()
     badge = item.find("a", class_="badge").get_text().strip()
     delivery_price = item.find("span", class_="deal-delivery").get_text().strip()
-    ended = item.find("div", class_="vrow-top")
+    ended = item.find("div", class_="vrow-top deal deal-close")
     item_list.append(dict(name = title, price = price, type=badge, delPrice=delivery_price))
 
 for item in item_list:
